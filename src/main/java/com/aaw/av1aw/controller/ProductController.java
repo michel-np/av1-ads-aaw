@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.AllArgsConstructor;
 
@@ -21,6 +22,7 @@ import  com.aaw.av1aaw.service.ProductService;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/")
 public class ProductController {
 	private final ProductService productService;
 	
@@ -61,7 +63,7 @@ public class ProductController {
 	}
 	
 	
-	@DeleteMapping("/products")
+	@DeleteMapping("/products/{id}")
 	public ResponseEntity<Void> delete(@PathVariable String id) {
 		productService.delete(id);
 		

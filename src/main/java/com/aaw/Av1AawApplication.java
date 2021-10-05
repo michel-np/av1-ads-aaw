@@ -1,4 +1,5 @@
-package com.aaw.av1aaw;
+package com.aaw;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
